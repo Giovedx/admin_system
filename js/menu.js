@@ -1,7 +1,7 @@
 export default function (nga, admin) {
     return nga.menu()
         .addChild(nga.menu()
-            .title('Visitors')
+            .title('Visitantes')
             .icon('<span class="fa fa-users fa-fw"></span>')
             .active(path => path.indexOf('/customers') === 0) // active() is the function that determines if the menu is active
             .addChild(nga.menu()
@@ -19,7 +19,7 @@ export default function (nga, admin) {
                 .icon('<span class="fa fa-scissors fa-fw"></span>'))
         )
         .addChild(nga.menu()
-            .title('Sales')
+            .title('Ventas')
             .icon('<span class="fa fa-shopping-cart fa-fw"></span>')
             .active(path => path.indexOf('/commands') === 0)
             .addChild(nga.menu()
@@ -36,7 +36,7 @@ export default function (nga, admin) {
                 .icon('<span class="fa fa-hand-o-left fa-fw"></span>'))
         )
         .addChild(nga.menu()
-            .title('Catalog')
+            .title('Catalogo')
             .icon('<span class="fa fa-th-list fa-fw"></span>')
             .addChild(nga.menu(admin.getEntity('products')) // nga.menu(entity) sets defaults title, link and active values correctly
                 .icon('<span class="fa fa-picture-o fa-fw"></span>'))
@@ -46,7 +46,7 @@ export default function (nga, admin) {
         .addChild(nga.menu(admin.getEntity('reviews'))
             .icon('<span class="fa fa-comments fa-fw"></span>'))
         .addChild(nga.menu()
-            .title('Configuration')
+            .title('Configuracion')
             .icon('<span class="fa fa-cog fa-fw"></span>')
             .link('/settings/show/1')
             .active(path => path.indexOf('/settings') === 0)

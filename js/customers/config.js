@@ -7,7 +7,7 @@ export default function (nga, admin) {
 
     var customer = admin.getEntity('customers');
     customer.listView()
-        .title('Visitors')
+        .title('Visitantes')
         .fields([
             nga.field('avatar', 'template')
                 .label('')
