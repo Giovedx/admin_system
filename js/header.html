@@ -1,0 +1,19 @@
+<div class="navbar-header">
+    <mobile-navigation></mobile-navigation>
+    <a class="navbar-brand" href="#" ng-click="appController.displayHome()">Posters Galore Backend</a>
+</div>
+<ul class="nav navbar-top-links navbar-right hidden-xs">
+    <li>
+        <a href="https://github.com/marmelab/ng-admin-demo">
+            <i class="fa fa-github fa-lg"></i>&nbsp;Source
+        </a>
+    </li>
+    <li uib-dropdown>
+        <a uib-dropdown-toggle href="#" aria-expanded="true" ng-controller="username">
+            <i class="fa fa-user fa-lg"></i>&nbsp;{{ username }}&nbsp;<i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user" role="menu">
+            <li><a href="#" onclick="logout()"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+        </ul>
+    </li>
+</ul>

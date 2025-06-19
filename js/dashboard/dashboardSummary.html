@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-lg-12">
+       
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-usd fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.commands.revenue | number:0 }}</div>
+                        <div>Ingresos Mensuales</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'commands'})">
+                <div class="panel-footer">
+                    <span class="pull-left">Monstrar detalles</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-shopping-cart fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.commands.pending_orders }}</div>
+                        <div>Ordenes Pendientes</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'commands',search:{status:'ordered'}})">
+                <div class="panel-footer">
+                    <span class="pull-left">Monstrar detalles</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.reviews }}</div>
+                        <div>Revisiones Pendientes</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'reviews', search:{status:'pending'}})">
+                <div class="panel-footer">
+                    <span class="pull-left">Monstrar detalles</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-user-plus fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{ stats.customers }}</div>
+                        <div>Clientes Nuevos</div>
+                    </div>
+                </div>
+            </div>
+            <a ui-sref="list({entity:'customers',search:{has_ordered:true}})">
+                <div class="panel-footer">
+                    <span class="pull-left">Monstrar detalles</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
